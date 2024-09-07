@@ -1,0 +1,19 @@
+<h1>DBZ personajes</h1>
+<hr />
+
+<div class="row container">
+  <!-- List of Dragon Ball Z members -->
+  <div class="col">
+    <app-dbz-list
+      [characterList]="characters"
+      (onDeleteCharacter)="deleteCharacterById($event)"
+    ></app-dbz-list>
+  </div>
+
+  <!-- DBZ Form -->
+  <div class="col">
+    <app-dbz-add-character
+      (onNewCharacter)="onNewCharacter($event)"
+    ></app-dbz-add-character>
+  </div>
+</div>
